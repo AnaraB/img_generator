@@ -2,7 +2,6 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { useGlobalContext } from "./context";
 
-
 const url = `https://api.unsplash.com/search/photos?page=3&client_id=${key}`;
 
 function Gallery() {
