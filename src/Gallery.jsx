@@ -1,14 +1,19 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
+import { useGlobalContext } from "./context";
 
 
-const url = `https://api.unsplash.com/search/photos?page=3&query=berry&client_id=${key}`;
+const url = `https://api.unsplash.com/search/photos?page=3&client_id=${key}`;
 
 function Gallery() {
+  const { searchTerm } = useGlobalContext();
   const response = useQuery({
-    queryKey: ["images"],
+    //['images'] is used for fetching all images
+    // React Query caches data for each specific searchTerm separately
+    //If cached data exists and is valid (not stale), it returns the cached data instantly.
+    queryKey: ["images", searchTerm],
     queryFn: async () => {
-      const result = await axios.get(url);
+      const result = await axios.get(`${url}&query=${searchTerm}`);
       return result.data;
     },
   });

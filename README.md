@@ -104,6 +104,13 @@ In order to implement search functionality in your application, you will need to
 
 After setting up React Query and creating the searchValue state value, you will need to modify the useQuery function to fetch images based on the user's search input.
 
+### Benefits of Query Keys and Caching
+- Performance: Avoid redundant network requests by serving data from the cache.
+
+- Consistency: Automatically keep your UI up-to-date as queries refetch data in the background when needed.
+
+- Flexibility: Easily refetch or invalidate specific queries using their queryKey.
+
 #### Check Whether User Prefers Dark Mode with JavaScript
 
 To provide a better user experience, you can check whether the user prefers dark mode using JavaScript. This can be done by accessing the user's system preferences and setting the theme of your application accordingly.
