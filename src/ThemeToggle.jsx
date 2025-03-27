@@ -6,7 +6,7 @@ const  ThemeToggle = ()=> {
 
  // When the button is clicked, invoke 'toggleDarkTheme'
  const { isDarkTheme, toggleDarkTheme } = useGlobalContext()
- console.log(isDarkTheme);
+
 
   return (
   <section className="'toggle-container">
