@@ -14,15 +14,9 @@ html {
 
 :root {
   /* colors */
-  --primary-100: #e2e0ff;
-  --primary-200: #c1beff;
-  --primary-300: #a29dff;
-  --primary-400: #837dff;
-  --primary-500: #645cff;
-  --primary-600: #504acc;
-  --primary-700: #3c3799;
-  --primary-800: #282566;
-  --primary-900: #141233;
+  --primary-300: #98f2ba;
+  --primary-500: #53ea8c;
+
 
   /* grey */
   --grey-50: #f8fafc;
@@ -39,8 +33,6 @@ html {
   /* rest of the colors */
   --black: #222;
   --white: #fff;
-  --red-light: #f8d7da;
-  --red-dark: #842029;
   --green-light: #d1e7dd;
   --green-dark: #0f5132;
 
@@ -106,12 +98,12 @@ h5 {
   font-size: clamp(0.875rem, 1.5vw, 1.5rem); /* Tiny heading */
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --textColor: var(--dark-mode-text-color);
     --backgroundColor: var(--dark-mode-bg-color);
   }
-}
+} */
 
 .title {
   text-align: center;
@@ -134,18 +126,12 @@ ul {
   padding: 0;
 }
 
-.img {
-  width: 100%;
-  display: block;
-  object-fit: cover;
-}
 
 /* form */
 
 .form {
   width: 90vw;
   max-width: var(--fixed-width);
-  background: var(--white);
   border-radius: var(--borderRadius);
   box-shadow: var(--shadow-2);
   padding: 2rem 2.5rem;
@@ -285,13 +271,19 @@ Gallery
 .image-container {
   width: var(--view-width);
   max-width: var(--max-width);
-  margin: 3rem auto;
+  margin: 2rem;
   display: grid;
   gap: 2rem;
 }
 
 .image-container .img {
   height: 10rem;
+}
+
+.img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
 }
 
 @media (min-width: 768px) {
