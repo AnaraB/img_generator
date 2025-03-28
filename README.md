@@ -165,7 +165,8 @@ In this case, searchTerm is the user's search input, and it is used to modify th
 
 Therefore, without including searchTerm in the queryKey array, the useQuery hook would not re-fetch data when the user performs a new search.
 
-#### Vite ENV Vars
+#### Deployed site 
 
-- .env : must be included in .gitignore
-# img_generator
+https://img-generator-unsplash.netlify.app/
+
+
